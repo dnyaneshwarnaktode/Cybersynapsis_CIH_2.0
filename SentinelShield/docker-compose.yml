@@ -44,6 +44,7 @@ services:
       - ./nginx:/etc/nginx
       # This shared volume is where Nginx writes logs
       - nginx_logs:/var/log/nginx
+      - ./nginx/logs:/var/log/nginx
     depends_on:
       - target_app
       - sentinelshield_app

@@ -5,7 +5,7 @@ app.secret_key = 'your_secret_key_here'  # Replace with a secure key in producti
 
 @app.before_request
 def require_login():
-    if request.endpoint not in ('login', 'logout', 'static') and not session.get('logged_in'):
+    if request.endpoint not in ('login', 'logout', 'signup', 'static') and not session.get('logged_in'):
         return redirect(url_for('login'))
 
 @app.route('/')
@@ -35,6 +35,14 @@ def login():
         session['logged_in'] = True
         return redirect(url_for('index'))
     return render_template('login.html')
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        # Simulate account creation for demo
+        # In a real app, you would save user data to database
+        return redirect(url_for('login'))
+    return render_template('signup.html')
 
 @app.route('/logout')
 def logout():
