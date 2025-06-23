@@ -5,28 +5,32 @@
 {% block content %}
 <section class="py-5 text-center">
   <div class="container">
-    <h2 class="fw-bold">Get in Touch</h2>
-    <p class="text-light">Interested in using SentinelShield? Request a demo or contact us below.</p>
+    <div class="content-box">
+      <h2 class="fw-bold">Get in Touch</h2>
+      <p class="text-light">Interested in using SentinelShield? Request a demo or contact us below.</p>
+    </div>
   </div>
 </section>
 
 <section class="py-5">
   <div class="container">
-    <form>
-      <div class="mb-3">
-        <label class="form-label text-light">Full Name</label>
-        <input type="text" class="form-control" placeholder="Enter your name">
-      </div>
-      <div class="mb-3">
-        <label class="form-label text-light">Email address</label>
-        <input type="email" class="form-control" placeholder="Enter your email">
-      </div>
-      <div class="mb-3">
-        <label class="form-label text-light">Message</label>
-        <textarea class="form-control" rows="4" placeholder="How can we help you?"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Message</button>
-    </form>
+    <div class="content-box">
+      <form>
+        <div class="mb-3">
+          <label class="form-label text-light">Full Name</label>
+          <input type="text" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-light">Email address</label>
+          <input type="email" class="form-control" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-light">Message</label>
+          <textarea class="form-control" rows="4" placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
   </div>
 </section>
 {% endblock %}
