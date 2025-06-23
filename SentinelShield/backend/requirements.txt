@@ -2,3 +2,4 @@ flask
 python-dotenv
 gunicorn
 scikit-learn
+python-dotenv

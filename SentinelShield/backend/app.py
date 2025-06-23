@@ -142,9 +142,15 @@ def process_logs():
 
 # Helper to log suspicious events to JSON file
 def log_suspicious_event(event):
-    events = load_events()
-    events.append(event)
-    save_events(events)
+    print("📝 Attempting to log event:", event)
+    try:
+        events = load_events()
+        events.append(event)
+        save_events(events)
+        print("✅ Event logged successfully")
+    except Exception as e:
+        print("❌ Failed to log event:", e)
+
 
 def analyze_log_entry(log_entry):
     """
@@ -178,7 +184,7 @@ def analyze_log_entry(log_entry):
             "requests": APP_STATS["requests_per_minute"]
         })
         if len(APP_STATS["requests_per_minute_history"]) > 10:
-            APP_STATS["requests_per_minute_history"].pop(0)
+            APP_STATS["requests_pe_minute_history"].pop(0)
     
     # --- 1. Rate Limiting Detection ---
     ip_request_counts[ip] = [t for t in ip_request_counts[ip] if (now - t).total_seconds() < TRAFFIC_WINDOW]
@@ -195,7 +201,6 @@ def analyze_log_entry(log_entry):
             'user_agent': log_entry.get('user_agent', '')[:100]  # Truncate long user agents
         }
         log_suspicious_event(event)
-
     # --- 2. Suspicious User-Agent Detection (Example) ---
     user_agent = log_entry.get('user_agent', '').lower()
     suspicious_agents = ['sqlmap', 'nmap', 'nikto', 'curl', 'wget', 'python-requests', 'hydra', 'burp', 'w3af', 'zap', 'scanner', 'bot']
@@ -228,6 +233,31 @@ def analyze_log_entry(log_entry):
             'user_agent': log_entry.get('user_agent', '')[:100]
         }
         log_suspicious_event(event)
+     # --- 4. ML-Based Threat Detection ---
+# --- 4. ML-Based Threat Detection ---
+try:
+    ml_features = {
+        'requests_per_minute': APP_STATS.get("requests_per_minute", 10),
+        'avg_time_between_requests': 60 / APP_STATS.get("requests_per_minute", 10),
+        'unique_user_agents': len(set([log_entry.get('user_agent', '')]))
+    }
+
+    if predict_threat(ml_features):
+        print("⚠️ ML THREAT DETECTED")
+        log_suspicious_event({
+            'type': 'ML Anomaly',
+            'ip': ip,
+            'timestamp': now.strftime('%Y-%m-%d %H:%M:%S'),
+            'details': f"ML detected unusual behavior with RPM: {ml_features['requests_per_minute']}, UA count: {ml_features['unique_user_agents']}",
+            'severity': 'HIGH',
+            'request_path': log_entry.get('request', '').split()[1] if len(log_entry.get('request', '').split()) > 1 else '/',
+            'user_agent': log_entry.get('user_agent', '')[:100]
+        })
+except Exception as e:
+    print("❌ Failed ML detection:", e)
+
+
+
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -246,26 +276,6 @@ def logout():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-        # --- 4. ML-Based Threat Detection ---
-    try:
-        ml_features = {
-            'requests_per_minute': APP_STATS.get("requests_per_minute", 10),
-            'avg_time_between_requests': 60 / APP_STATS.get("requests_per_minute", 10),
-            'unique_user_agents': len(set([log_entry.get('user_agent', '')]))
-        }
-
-        if predict_threat(ml_features):
-            log_suspicious_event({
-                'type': 'ML Anomaly',
-                'ip': ip,
-                'timestamp': now.strftime('%Y-%m-%d %H:%M:%S'),
-                'details': f"ML detected unusual behavior with RPM: {ml_features['requests_per_minute']}, UA count: {ml_features['unique_user_agents']}",
-                'severity': 'HIGH',
-                'request_path': log_entry.get('request', '').split()[1] if len(log_entry.get('request', '').split()) > 1 else '/',
-                'user_agent': log_entry.get('user_agent', '')[:100]
-            })
-    except Exception as e:
-        print(f"ML detection failed: {e}")
 
     # Load recent suspicious events from JSON file
     events = load_events()

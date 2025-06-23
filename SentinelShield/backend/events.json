@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "type": "ML Anomaly",
+        "ip": "192.168.1.100",
+        "timestamp": "2025-06-23 17:45:00",
+        "details": "ML detected unusual behavior with RPM: 92, UA count: 7",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.31"
+    }
+ ]
