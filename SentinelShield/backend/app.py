@@ -588,4 +588,5 @@ manage_thread.start()
 print("SentinelShield background threads started")
 
 if __name__ == '__main__':
+    threading.Thread(target=process_logs, daemon=True).start()
     app.run(host='0.0.0.0', port=8000, debug=True)
