@@ -1,19 +1,781 @@
 [
     {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.242",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:08:06",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
         "type": "HTTP Error",
-        "ip": "192.168.1.255",
+        "ip": "192.168.1.242",
         "status": "500",
-        "timestamp": "2025-06-23 18:36:28",
+        "timestamp": "2025-06-23 19:08:06",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.233",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:08",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.233",
+        "status": "403",
+        "timestamp": "2025-06-23 19:08:08",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.77",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:10",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.77",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:10",
         "details": "HTTP 500 error detected",
         "severity": "HIGH",
         "request_path": "/login",
         "user_agent": "curl/7.68.0"
     },
     {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.77",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:10",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
         "type": "HTTP Error",
-        "ip": "192.168.1.42",
+        "ip": "192.168.1.77",
         "status": "500",
-        "timestamp": "2025-06-23 18:36:30",
+        "timestamp": "2025-06-23 19:08:10",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.101",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:12",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.101",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:12",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.101",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:12",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.101",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:12",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.84",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:14",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.84",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:14",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.213",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:16",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.213",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:16",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.213",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:16",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.213",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:16",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.240",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:18",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.240",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:18",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.240",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:18",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.240",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:18",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.226",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:08:20",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.226",
+        "status": "403",
+        "timestamp": "2025-06-23 19:08:20",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.226",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:08:20",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.226",
+        "status": "403",
+        "timestamp": "2025-06-23 19:08:20",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.205",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:22",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.205",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:22",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.205",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:22",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.205",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:22",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.235",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:08:24",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.235",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:08:24",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.229",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:26",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.229",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:26",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.136",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.136",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:28",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.136",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.136",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:28",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.231",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:30",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.231",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:30",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.231",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:30",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.231",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:30",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.179",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:08:32",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.179",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:08:32",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.152",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:34",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.152",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:34",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.157",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:36",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.157",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:36",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.250",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:38",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.250",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:38",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.250",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:38",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.250",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:38",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.147",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:08:40",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.147",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:40",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.147",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:08:40",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.147",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:40",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.137",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:42",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.137",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:42",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.137",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:42",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.137",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:42",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.103",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:44",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.103",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:44",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.103",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:44",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.103",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:44",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.31",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:46",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.31",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:08:46",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.149",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:48",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.149",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:48",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.195",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:50",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.195",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:50",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.195",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:08:50",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.195",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:50",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.228",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:52",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.228",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:52",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.228",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:52",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.228",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:52",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.186",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:54",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.186",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:54",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.186",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:08:54",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.186",
+        "status": "404",
+        "timestamp": "2025-06-23 19:08:54",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.4",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:08:56",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.4",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:08:56",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.167",
+        "status": "500",
+        "timestamp": "2025-06-23 19:08:58",
         "details": "HTTP 500 error detected",
         "severity": "HIGH",
         "request_path": "/login",
@@ -21,9 +783,4058 @@
     },
     {
         "type": "HTTP Error",
-        "ip": "192.168.1.42",
+        "ip": "192.168.1.167",
         "status": "500",
-        "timestamp": "2025-06-23 18:36:30",
+        "timestamp": "2025-06-23 19:08:58",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.228",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:09:00",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.228",
+        "status": "500",
+        "timestamp": "2025-06-23 19:09:00",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.228",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:09:00",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.228",
+        "status": "500",
+        "timestamp": "2025-06-23 19:09:00",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.168",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:02",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.168",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:02",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.84",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:09:04",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.84",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:04",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.75",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:06",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.75",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:06",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.75",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:06",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.75",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:06",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.230",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:08",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.230",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:08",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.230",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:08",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.230",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:08",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.198",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:10",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.198",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:10",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.198",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:10",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.198",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:10",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.253",
+        "status": "500",
+        "timestamp": "2025-06-23 19:09:12",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.21",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:14",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.21",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:14",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.21",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:14",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.21",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:14",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.143",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:16",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.143",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:16",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.143",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:16",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.143",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:16",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.37",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:09:18",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.37",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:18",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.37",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:09:18",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.37",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:18",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.198",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:20",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.198",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:20",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.200",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:22",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.200",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.200",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:22",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.200",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.209",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:24",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.209",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:24",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.209",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:24",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.209",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:24",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.58",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:26",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.58",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:26",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.76",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:28",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.76",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:28",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.76",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:28",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.76",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:28",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.125",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:30",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:30",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.125",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:30",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:30",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.240",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:32",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.240",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:32",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.240",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:32",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.240",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:32",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.211",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:34",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.211",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:34",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.211",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:34",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.211",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:34",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.2",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:09:36",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.2",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:09:36",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.15",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:38",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.15",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:38",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.15",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:38",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.15",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:38",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.109",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:09:40",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.109",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:09:40",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.233",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:42",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.233",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:42",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.233",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:09:42",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.233",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:42",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.38",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:44",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.38",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:44",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.153",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:46",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.153",
+        "status": "500",
+        "timestamp": "2025-06-23 19:09:46",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.153",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:46",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.153",
+        "status": "500",
+        "timestamp": "2025-06-23 19:09:46",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.215",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:48",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.215",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:48",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.215",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:48",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.215",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:48",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.101",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:49",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.101",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:50",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.131",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:51",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.131",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:09:52",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.49",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:09:53",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.49",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:53",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.49",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:09:54",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.49",
+        "status": "403",
+        "timestamp": "2025-06-23 19:09:54",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.153",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:56",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.153",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:56",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.153",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:09:56",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.153",
+        "status": "404",
+        "timestamp": "2025-06-23 19:09:56",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.74",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:09:57",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.74",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:09:58",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.168",
+        "status": "500",
+        "timestamp": "2025-06-23 19:09:59",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.168",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:00",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.67",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:10:01",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.67",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:01",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.67",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:10:02",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.67",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:02",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.129",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:04",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.129",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:04",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.172",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:06",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.172",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:06",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.80",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:10:08",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.80",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:08",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.80",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:10:08",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.80",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:08",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.100",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:10",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.100",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:10",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.100",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:10",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.100",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:10",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.111",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:12",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.111",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:12",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.111",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:12",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.111",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:12",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.90",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:14",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.90",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:14",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.116",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:16",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.116",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:16",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.116",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:16",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.116",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:16",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.97",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:18",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.97",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:18",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.177",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:20",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.177",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:20",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.177",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:20",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.177",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:20",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.5",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:22",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.5",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.5",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:22",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.5",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.205",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:24",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.205",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:24",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.205",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:24",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.205",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:24",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.93",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:26",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.93",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:26",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.52",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.52",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.47",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:30",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.47",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:30",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.47",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:30",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.47",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:30",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.52",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:32",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.52",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:32",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.226",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:34",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.226",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:34",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.226",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:34",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.226",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:34",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.220",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:36",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.220",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:36",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.234",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:38",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.234",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:38",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.234",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:38",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.234",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:38",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.186",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:40",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.186",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:40",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.186",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:10:40",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.186",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:40",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.123",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:42",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.123",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:42",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.204",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:46",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.204",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:46",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.204",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:46",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.204",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:46",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.125",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:48",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:48",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.125",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:48",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:48",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.188",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:50",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.188",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:50",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.188",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:10:50",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.188",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:50",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.139",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:52",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.139",
+        "status": "404",
+        "timestamp": "2025-06-23 19:10:52",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.216",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:54",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.216",
+        "status": "500",
+        "timestamp": "2025-06-23 19:10:54",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.119",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:56",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.119",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:10:56",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.100",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:58",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.100",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:58",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.100",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:10:58",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.100",
+        "status": "403",
+        "timestamp": "2025-06-23 19:10:58",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.193",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:00",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.193",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:00",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.193",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:00",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.193",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:00",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.104",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:02",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.175",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:04",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.175",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:04",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.243",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:06",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.243",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:06",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.243",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:06",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.243",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:06",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.83",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:08",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.83",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:08",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.83",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:08",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.83",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:08",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.189",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:10",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.189",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:10",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.189",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:10",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.189",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:10",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.173",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:12",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.173",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:12",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.173",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:12",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.173",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:12",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.121",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:11:14",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.121",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:14",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.121",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:11:14",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.121",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:14",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.65",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:16",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.65",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:16",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.132",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:18",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.132",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:18",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.132",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:18",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.132",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:18",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.249",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:20",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.249",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:20",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.249",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:20",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.249",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:20",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.174",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.174",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.239",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:24",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.239",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:24",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.239",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:24",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.239",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:24",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.88",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:11:26",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.88",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:26",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.88",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:11:26",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.88",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:26",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.60",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.60",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:28",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.60",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.60",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:28",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.133",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:30",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.133",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:30",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.133",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:30",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.133",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:30",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.185",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:32",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.185",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:32",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.185",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:32",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.185",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:32",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.203",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:34",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.203",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:34",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.203",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:34",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.203",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:34",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.112",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:36",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.112",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:36",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.112",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:36",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.112",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:36",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.180",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:38",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.180",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:38",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.180",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:38",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.180",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:38",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.140",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:40",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.140",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:40",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.140",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:40",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.140",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:40",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.44",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:11:42",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.44",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:42",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.44",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:11:42",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.44",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:42",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.125",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:44",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:44",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.125",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:11:44",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:44",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.255",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:46",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.255",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:46",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.255",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:46",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.255",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:46",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.150",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:48",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.150",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:48",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.150",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:48",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.150",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:48",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.26",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:50",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.26",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:50",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.26",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:11:50",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.26",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:50",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.85",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:52",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.85",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:52",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.85",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:52",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.85",
+        "status": "500",
+        "timestamp": "2025-06-23 19:11:52",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.217",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:54",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.217",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:54",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.217",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:11:54",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.217",
+        "status": "403",
+        "timestamp": "2025-06-23 19:11:54",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.191",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:56",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.191",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:11:56",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.123",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:58",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.123",
+        "status": "404",
+        "timestamp": "2025-06-23 19:11:58",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.64",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:02",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.64",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:02",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.73",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:04",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.73",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:04",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.28",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:06",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.28",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:06",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.198",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:08",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.198",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:08",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.189",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:10",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.189",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:10",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.189",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:10",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.189",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:10",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.51",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:12",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.51",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:13",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.174",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:14",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.174",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:14",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.174",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:15",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.174",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:15",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.111",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:16",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.111",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:16",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.245",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:18",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.245",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:18",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.29",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:20",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.29",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:20",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.209",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.209",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:22",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.182",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:24",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.182",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:24",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.182",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:24",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.182",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:24",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.153",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:26",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.153",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:26",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.153",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:26",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.153",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:26",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.162",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.162",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:28",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.162",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:28",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.162",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:28",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.44",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:30",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.44",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:30",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.78",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:12:32",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.78",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:12:32",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.11",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:36",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.11",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:36",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.11",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:36",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.11",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:36",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.100",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:38",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.100",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:38",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.72",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:12:40",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.72",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:40",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.72",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:12:40",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.72",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:40",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.123",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:42",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.123",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:42",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:44",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.125",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:44",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.9",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:46",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.9",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:12:46",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.93",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:48",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.93",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:48",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.93",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:49",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.93",
+        "status": "404",
+        "timestamp": "2025-06-23 19:12:49",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.145",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:12:50",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.145",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:12:51",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.95",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:52",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.95",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:52",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.95",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:12:52",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.95",
+        "status": "403",
+        "timestamp": "2025-06-23 19:12:52",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "sqlmap/1.5.2"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.106",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:54",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.106",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:54",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.106",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:12:54",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.106",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:54",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.2",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:56",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.2",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:56",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.243",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:58",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.243",
+        "status": "500",
+        "timestamp": "2025-06-23 19:12:58",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.114",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:13:00",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.114",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:00",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.114",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:13:00",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.114",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:00",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.66",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:13:02",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.66",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:02",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.66",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:04",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.66",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:04",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.10",
+        "status": "404",
+        "timestamp": "2025-06-23 19:13:06",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.10",
+        "status": "404",
+        "timestamp": "2025-06-23 19:13:06",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.183",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:08",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.183",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:08",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.183",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:08",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.183",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:08",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.243",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:13:10",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.243",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:10",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.243",
+        "user_agent": "curl/7.68.0",
+        "timestamp": "2025-06-23 19:13:11",
+        "details": "Detected suspicious user-agent: curl",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.243",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:11",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.182",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:12",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.182",
+        "status": "404",
+        "timestamp": "2025-06-23 19:13:12",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.182",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:13",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.182",
+        "status": "404",
+        "timestamp": "2025-06-23 19:13:13",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.228",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:14",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.228",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:14",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.255",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:16",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.255",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:16",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.255",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:16",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.255",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:16",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.136",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:18",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.136",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:18",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.136",
+        "user_agent": "Hydra",
+        "timestamp": "2025-06-23 19:13:18",
+        "details": "Detected suspicious user-agent: hydra",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.136",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:18",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Hydra"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.122",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:13:20",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.122",
+        "user_agent": "sqlmap/1.5.2",
+        "timestamp": "2025-06-23 19:13:21",
+        "details": "Detected suspicious user-agent: sqlmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.223",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:22",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.223",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:23",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.4",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:24",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.4",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:24",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.4",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:24",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.4",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:24",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.86",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:26",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.86",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:26",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.86",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:26",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.86",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:26",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.189",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:13:28",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.189",
+        "status": "404",
+        "timestamp": "2025-06-23 19:13:28",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.189",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:13:28",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.189",
+        "status": "404",
+        "timestamp": "2025-06-23 19:13:28",
+        "details": "HTTP 404 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "python-requests/2.25"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.19",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:13:30",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.19",
+        "user_agent": "python-requests/2.25",
+        "timestamp": "2025-06-23 19:13:30",
+        "details": "Detected suspicious user-agent: python-requests",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.181",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:32",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.181",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:32",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "Suspicious User-Agent",
+        "ip": "192.168.1.181",
+        "user_agent": "nmap",
+        "timestamp": "2025-06-23 19:13:32",
+        "details": "Detected suspicious user-agent: nmap",
+        "severity": "MEDIUM",
+        "request_path": "/login"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.181",
+        "status": "403",
+        "timestamp": "2025-06-23 19:13:32",
+        "details": "HTTP 403 error detected",
+        "severity": "MEDIUM",
+        "request_path": "/login",
+        "user_agent": "nmap"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.63",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:34",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.63",
+        "status": "500",
+        "timestamp": "2025-06-23 19:13:34",
         "details": "HTTP 500 error detected",
         "severity": "HIGH",
         "request_path": "/login",

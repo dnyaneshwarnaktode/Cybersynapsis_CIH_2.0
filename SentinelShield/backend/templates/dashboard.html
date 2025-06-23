@@ -91,13 +91,14 @@
             tbody.innerHTML = '<tr><td colspan="6">No suspicious events detected.</td></tr>';
         } else {
             events.forEach((event, index) => {
-                let rowClass = '';
-                if (event.type === 'Suspicious User-Agent') rowClass = 'warning-event';
-                
+                let severityClass = '';
+                if (event.severity === 'HIGH') severityClass = 'badge bg-danger';
+                else if (event.severity === 'MEDIUM') severityClass = 'badge bg-warning text-dark';
+                else severityClass = 'badge bg-info';
                 tbody.innerHTML += `
-                    <tr class='${rowClass}'>
+                    <tr>
                         <td>${index + 1}</td>
-                        <td>${event.type}</td>
+                        <td><span class="${severityClass}">${event.type}</span></td>
                         <td>${event.ip ? event.ip : '-'}</td>
                         <td>${event.timestamp}</td>
                         <td>${event.details}</td>
