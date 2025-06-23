@@ -3,13 +3,38 @@
 {% block title %}SentinelShield - AI-Powered Web Security{% endblock %}
 
 {% block content %}
+<!-- Badges Row -->
+<div class="container pt-5 text-center">
+  <span class="badge-custom"><i class="fa fa-lightbulb"></i> Innovation Leader</span>
+  <span class="badge-custom"><i class="fa fa-gem"></i> Trusted Partner</span>
+  <span class="badge-custom"><i class="fa fa-star"></i> Award Winning</span>
+</div>
+
 <!-- Hero Section -->
 <section class="hero text-center position-relative overflow-hidden">
   <div class="container position-relative" style="z-index:1;">
-    <h1 class="display-3 fw-bold mb-3" style="color:#fff; text-shadow:2px 4px 12px rgba(90,114,189,0.25);">AI-Powered Protection for Public & Govt Websites</h1>
-    <p class="lead mb-4" style="color:#e0eaff;">SentinelShield monitors traffic in real time, protecting your critical web assets from emerging threats and sophisticated cyberattacks.</p>
-    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg me-2">Request Demo</a>
-    <a href="{{ url_for('how_it_works') }}" class="btn btn-primary btn-lg">Learn More</a>
+    <h1 class="display-2 fw-bold mb-3" style="color:#fff; text-shadow:2px 4px 12px rgba(0,0,0,0.18);">
+      Welcome to <span class="accent-gold">SentinelShield</span>
+    </h1>
+    <p class="lead mb-4" style="color:#fff;">Your trusted partner in AI-powered web security and innovation. We deliver cutting-edge solutions to solve complex cyber challenges.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+      <a href="{{ url_for('how_it_works') }}" class="btn btn-primary btn-lg"><i class="fa fa-info-circle me-2"></i>Learn More About Us</a>
+      <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg"><i class="fa fa-paper-plane me-2"></i>Get Started</a>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-4 col-md-2">
+        <div class="accent-gold display-5 fw-bold">0</div>
+        <div class="text-main">+ Projects</div>
+      </div>
+      <div class="col-4 col-md-2">
+        <div class="accent-gold display-5 fw-bold">0</div>
+        <div class="text-main">% Success Rate</div>
+      </div>
+      <div class="col-4 col-md-2">
+        <div class="accent-gold display-5 fw-bold">0</div>
+        <div class="text-main">+ Team Members</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -17,69 +42,29 @@
 <section class="py-5">
   <div class="container">
     <div class="section-header text-center mb-5">
-      <h2 class="fw-bold" style="color:#fff; text-shadow:2px 4px 12px rgba(90,114,189,0.25);">How SentinelShield Works</h2>
-      <p style="color:#e0eaff;">Our multi-layered defense system provides comprehensive security at every level.</p>
+      <h2 class="fw-bold" style="color:#fff; text-shadow:2px 4px 12px rgba(0,0,0,0.18);">How <span class="accent-gold">SentinelShield</span> Works</h2>
+      <p style="color:#fff;">Our multi-layered defense system provides comprehensive security at every level.</p>
     </div>
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="feature-card">
-          <div class="icon mb-3"><i class="fas fa-shield-alt fa-2x"></i></div>
-          <h5 style="color:#fff;">Reverse Proxy</h5>
-          <p style="color:#e0eaff;">All client traffic flows through our robust NGINX proxy, allowing for full visibility and granular control over incoming requests.</p>
+        <div class="feature-card text-center p-4">
+          <div class="icon mb-3"><i class="fas fa-shield-alt fa-2x accent-gold"></i></div>
+          <h5 class="accent-gold">Reverse Proxy</h5>
+          <p>All client traffic flows through our robust NGINX proxy, allowing for full visibility and granular control over incoming requests.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="feature-card">
-          <div class="icon mb-3"><i class="fas fa-brain fa-2x"></i></div>
-          <h5 style="color:#fff;">Smart Detection</h5>
-          <p style="color:#e0eaff;">Our system uses a hybrid model of rule-based filtering and machine learning to detect suspicious patterns in real-time.</p>
+        <div class="feature-card text-center p-4">
+          <div class="icon mb-3"><i class="fas fa-brain fa-2x accent-gold"></i></div>
+          <h5 class="accent-gold">Smart Detection</h5>
+          <p>Our system uses a hybrid model of rule-based filtering and machine learning to detect suspicious patterns in real-time.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="feature-card">
-          <div class="icon mb-3"><i class="fas fa-globe fa-2x"></i></div>
-          <h5 style="color:#fff;">Threat Intelligence</h5>
-          <p style="color:#e0eaff;">Trace the source of threats with IP geolocation and privacy-safe browser fingerprinting to build a proactive defense strategy.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Add-ons Section -->
-<section class="py-5">
-  <div class="container">
-    <div class="section-header text-center mb-5">
-      <h2 class="fw-bold" style="color:#fff; text-shadow:2px 4px 12px rgba(90,114,189,0.25);">More Than a WAF</h2>
-      <p style="color:#e0eaff;">An integrated suite of tools to manage and monitor your web security posture.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-3">
-        <div class="feature-card">
-          <div class="icon mb-2"><i class="fas fa-chart-line fa-lg"></i></div>
-          <h6 style="color:#fff;">Dashboard</h6>
-          <p style="color:#e0eaff;">Real-time threat visualizations.</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="feature-card">
-          <div class="icon mb-2"><i class="fas fa-server fa-lg"></i></div>
-          <h6 style="color:#fff;">Logging Server</h6>
-          <p style="color:#e0eaff;">Archive attack logs with SQLite or InfluxDB.</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="feature-card">
-          <div class="icon mb-2"><i class="fas fa-bell fa-lg"></i></div>
-          <h6 style="color:#fff;">Alerts</h6>
-          <p style="color:#e0eaff;">Send email/SMS via Twilio, SMTP or SendGrid.</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="feature-card">
-          <div class="icon mb-2"><i class="fas fa-box-open fa-lg"></i></div>
-          <h6 style="color:#fff;">Plug-and-Play</h6>
-          <p style="color:#e0eaff;">Deploy with Docker, integrate via NGINX.</p>
+        <div class="feature-card text-center p-4">
+          <div class="icon mb-3"><i class="fas fa-globe fa-2x accent-gold"></i></div>
+          <h5 class="accent-gold">Threat Intelligence</h5>
+          <p>Trace the source of threats with IP geolocation and privacy-safe browser fingerprinting to build a proactive defense strategy.</p>
         </div>
       </div>
     </div>
@@ -89,12 +74,12 @@
 <!-- Testimonials Section -->
 <section class="testimonial-section py-5">
   <div class="container">
-    <h2 class="text-center mb-5" style="color:#fff; text-shadow:2px 4px 12px rgba(90,114,189,0.25);">Trusted by Leading Agencies</h2>
+    <h2 class="text-center mb-5" style="color:#fff; text-shadow:2px 4px 12px rgba(0,0,0,0.18);">Trusted by Leading Agencies</h2>
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="testimonial-card">
-          <p style="color:#e0eaff;">"SentinelShield has been a game-changer for our department's web security. The real-time monitoring and automated blocking have saved us countless hours and protected sensitive citizen data. It's robust, reliable, and surprisingly easy to manage."</p>
-          <div class="author" style="color:#fff;">- Director of IT, City of Metropolis</div>
+        <div class="testimonial-card p-4">
+          <p>"SentinelShield has been a game-changer for our department's web security. The real-time monitoring and automated blocking have saved us countless hours and protected sensitive citizen data. It's robust, reliable, and surprisingly easy to manage."</p>
+          <div class="author accent-gold">- Director of IT, City of Metropolis</div>
         </div>
       </div>
     </div>
@@ -104,9 +89,9 @@
 <!-- Call to Action -->
 <section class="cta-section">
   <div class="container">
-    <h2 class="display-5 fw-bold" style="color:#fff; text-shadow:2px 4px 12px rgba(90,114,189,0.25);">Ready to Secure Your Services?</h2>
-    <p class="lead" style="color:#e0eaff;">Get a personalized demo and see how SentinelShield can protect your digital assets.</p>
-    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg mt-3">Request a Demo</a>
+    <h2 class="display-5 fw-bold" style="color:#fff; text-shadow:2px 4px 12px rgba(0,0,0,0.18);">Ready to Secure Your Services?</h2>
+    <p class="lead">Get a personalized demo and see how SentinelShield can protect your digital assets.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg mt-3"><i class="fa fa-paper-plane me-2"></i>Request a Demo</a>
   </div>
 </section>
 {% endblock %}
