@@ -1,22 +1,332 @@
 {% extends "base.html" %}
 
-{% block title %}Login - SentinelShield{% endblock %}
+{% block title %}Sign In - SentinelShield{% endblock %}
 
 {% block content %}
-<div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
-  <div class="glass-card p-5" style="max-width: 400px; width: 100%;">
-    <h2 class="mb-4 text-center">Login</h2>
-    <form method="post">
-      <div class="mb-3">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="login-container">
+    <div class="login-card">
+      <!-- Header -->
+      <div class="login-header text-center mb-4">
+        <h2 class="login-title">Welcome Back</h2>
+        <p class="login-subtitle">Sign in to your SentinelShield account</p>
       </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+
+      <!-- Social Login Buttons -->
+      <div class="social-login mb-4">
+        <button class="btn btn-social btn-google w-100">
+          <i class="fab fa-google me-2"></i>
+          Continue with Google
+        </button>
       </div>
-      <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
-    </form>
+
+      <!-- Divider -->
+      <div class="divider mb-4">
+        <span>or</span>
+      </div>
+
+      <!-- Email/Password Form -->
+      <form method="post" class="login-form">
+        <div class="form-group mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+        
+        <div class="form-group mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="fas fa-lock"></i>
+            </span>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">
+              Remember me
+            </label>
+          </div>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <!-- Sign In Button -->
+        <button type="submit" class="btn btn-primary w-100 mb-3">
+          <i class="fas fa-sign-in-alt me-2"></i>
+          Sign In
+        </button>
+      </form>
+
+      <!-- Sign Up Link -->
+      <div class="text-center">
+        <p class="signup-text">
+          Don't have an account? 
+          <a href="{{ url_for('signup') }}" class="signup-link">Sign up</a>
+        </p>
+      </div>
+
+      <!-- Demo Login Info -->
+      <div class="demo-info mt-4">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle me-2"></i>
+          <strong>Demo Mode:</strong> Any email/password combination will work for testing purposes.
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<style>
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.btn-social {
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.btn-google:hover {
+  background: #db4437;
+  border-color: #db4437;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.divider span {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  padding: 12px 16px;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffb347;
+  box-shadow: 0 0 0 0.2rem rgba(255, 179, 71, 0.25);
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group-text {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px 0 0 12px;
+}
+
+.input-group .form-control {
+  border-radius: 0 12px 12px 0;
+}
+
+.btn-outline-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.form-check-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-check-input:checked {
+  background-color: #ffb347;
+  border-color: #ffb347;
+}
+
+.form-check-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.forgot-password {
+  color: #ffb347;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  color: #e09e3e;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffb347, #e09e3e);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e09e3e, #d18a2e);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 179, 71, 0.3);
+}
+
+.signup-text {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.signup-link {
+  color: #ffb347;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link:hover {
+  color: #e09e3e;
+  text-decoration: underline;
+}
+
+.demo-info .alert {
+  background: rgba(13, 110, 253, 0.1);
+  border: 1px solid rgba(13, 110, 253, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 576px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+  
+  .login-title {
+    font-size: 1.75rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle password visibility
+  const togglePassword = document.getElementById('togglePassword');
+  const passwordInput = document.getElementById('password');
+  
+  togglePassword.addEventListener('click', function() {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    const icon = this.querySelector('i');
+    icon.classList.toggle('fa-eye');
+    icon.classList.toggle('fa-eye-slash');
+  });
+
+  // Google login button effect
+  const googleButton = document.querySelector('.btn-google');
+  googleButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Add loading state
+    const originalText = this.innerHTML;
+    this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Connecting to Google...';
+    this.disabled = true;
+    
+    // Simulate loading
+    setTimeout(() => {
+      this.innerHTML = originalText;
+      this.disabled = false;
+      alert('Google OAuth would be implemented here in a real application.');
+    }, 2000);
+  });
+
+  // Forgot password link
+  document.querySelector('.forgot-password').addEventListener('click', function(e) {
+    e.preventDefault();
+    alert('Password reset functionality would be implemented here.');
+  });
+});
+</script>
 {% endblock %} 
