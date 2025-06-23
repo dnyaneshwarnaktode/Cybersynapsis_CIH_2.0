@@ -1,11 +1,32 @@
 [
     {
-        "type": "ML Anomaly",
-        "ip": "192.168.1.100",
-        "timestamp": "2025-06-23 17:45:00",
-        "details": "ML detected unusual behavior with RPM: 92, UA count: 7",
+        "type": "HTTP Error",
+        "ip": "192.168.1.255",
+        "status": "500",
+        "timestamp": "2025-06-23 18:36:28",
+        "details": "HTTP 500 error detected",
         "severity": "HIGH",
         "request_path": "/login",
-        "user_agent": "python-requests/2.31"
+        "user_agent": "curl/7.68.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.42",
+        "status": "500",
+        "timestamp": "2025-06-23 18:36:30",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "HTTP Error",
+        "ip": "192.168.1.42",
+        "status": "500",
+        "timestamp": "2025-06-23 18:36:30",
+        "details": "HTTP 500 error detected",
+        "severity": "HIGH",
+        "request_path": "/login",
+        "user_agent": "Mozilla/5.0"
     }
- ]
+]
