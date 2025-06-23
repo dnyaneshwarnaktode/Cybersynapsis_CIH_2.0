@@ -153,10 +153,10 @@
             .then(res => res.json())
             .then(data => {
                 if (data.status === 'blocked') {
-                    alert(`Successfully blocked IP: ${ip}`);
+                    alert(`Successfully blocked IP: ${ip}\n\nYou can view all blocked IPs in the Blacklist page.`);
                     fetchEvents();
                 } else if (data.status === 'already_blocked') {
-                    alert(`IP address ${ip} is already blocked.`);
+                    alert(`IP address ${ip} is already blocked.\n\nYou can view all blocked IPs in the Blacklist page.`);
                 } else {
                     alert(`Error blocking IP: ${data.message}`);
                 }
@@ -189,7 +189,7 @@
                             <td><span class="badge ${getBadgeClass(event.type)}">${event.type}</span></td>
                             <td>
                                 ${event.ip}
-                                <button class="btn btn-sm btn-outline-danger ms-2" onclick="blockIp('${event.ip}')">Block</button>
+                                <button class="btn btn-sm btn-outline-danger ms-2" onclick="blockIP('${event.ip}')">Block</button>
                             </td>
                             <td>${event.details || ''}</td>
                         </tr>

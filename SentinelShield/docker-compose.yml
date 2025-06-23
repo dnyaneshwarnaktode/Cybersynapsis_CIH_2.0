@@ -9,6 +9,8 @@ services:
       - "8080"
     volumes:
       - ./target_website:/app
+      # Share events.json file with SentinelShield
+      - shared_events:/shared
 
   # 2. The SentinelShield Python Application
   sentinelshield_app:
@@ -26,6 +28,8 @@ services:
       - ./nginx:/etc/nginx
       # Mount docker socket to allow nginx reloads
       - /var/run/docker.sock:/var/run/docker.sock
+      # Share events.json file with target website
+      - shared_events:/shared
     depends_on:
       - target_app
 
@@ -52,3 +56,5 @@ services:
 volumes:
   # The shared volume for Nginx logs
   nginx_logs:
+  # The shared volume for events.json file
+  shared_events:

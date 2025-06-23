@@ -18,7 +18,7 @@ app.secret_key = os.getenv('SECRET_KEY', 'a_default_fallback_secret_key')
 
 DATA_FILE = 'data.json'
 LOG_FILE = 'logs.json'
-EVENTS_FILE = 'events.json'  # New file for suspicious events
+EVENTS_FILE = '/shared/events.json'  # Shared file accessible by both containers
 
 # Load user credentials from environment variables
 ADMIN_USERNAME = os.getenv('ADMIN_USERNAME', 'admin')
@@ -63,6 +63,8 @@ def login_required(f):
 def load_events():
     """Load events from JSON file"""
     try:
+        # Ensure shared directory exists
+        os.makedirs(os.path.dirname(EVENTS_FILE), exist_ok=True)
         with open(EVENTS_FILE, 'r') as f:
             content = f.read().strip()
             return json.loads(content) if content else []
@@ -71,8 +73,13 @@ def load_events():
 
 def save_events(events):
     """Save events to JSON file"""
-    with open(EVENTS_FILE, 'w') as f:
-        json.dump(events, f, indent=4)
+    try:
+        # Ensure shared directory exists
+        os.makedirs(os.path.dirname(EVENTS_FILE), exist_ok=True)
+        with open(EVENTS_FILE, 'w') as f:
+            json.dump(events, f, indent=4)
+    except Exception as e:
+        print(f"Error saving events: {e}")
 
 def manage_logs():
     """Periodically trims log files to prevent them from growing too large."""
@@ -81,6 +88,10 @@ def manage_logs():
         time.sleep(3600)  # Run once every hour
         for log_file in [LOG_FILE, EVENTS_FILE]:
             try:
+                # Ensure directory exists for shared files
+                if log_file == EVENTS_FILE:
+                    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+                
                 with open(log_file, 'r') as f:
                     content = f.read().strip()
                     data = json.loads(content) if content else []

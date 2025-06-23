@@ -29,7 +29,7 @@
                         </td>
                         <td>
                             {{ event.ip }}
-                            <button class="btn btn-sm btn-outline-danger ms-2" onclick="blockIp('{{ event.ip }}')">Block</button>
+                            <button class="btn btn-sm btn-outline-danger ms-2" onclick="blockIP('{{ event.ip }}')">Block</button>
                         </td>
                         <td>{{ event.details }}</td>
                     </tr>
@@ -62,4 +62,31 @@
         </ul>
     </nav>
 </div>
+
+<script>
+function blockIP(ip) {
+    if (!confirm(`Are you sure you want to block the IP address: ${ip}?`)) {
+        return;
+    }
+    fetch(`/block/${ip}`, {
+            method: 'POST'
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'blocked') {
+                alert(`Successfully blocked IP: ${ip}\n\nYou can view all blocked IPs in the Blacklist page.`);
+                // Optionally refresh the page to show updated events
+                window.location.reload();
+            } else if (data.status === 'already_blocked') {
+                alert(`IP address ${ip} is already blocked.\n\nYou can view all blocked IPs in the Blacklist page.`);
+            } else {
+                alert(`Error blocking IP: ${data.message}`);
+            }
+        })
+        .catch(err => {
+            console.error('Error blocking IP:', err);
+            alert('An unexpected error occurred. Check the console for details.');
+        });
+}
+</script>
 {% endblock %} 

@@ -4839,5 +4839,11 @@
         "severity": "HIGH",
         "request_path": "/login",
         "user_agent": "Mozilla/5.0"
+    },
+    {
+        "type": "IP Blocked",
+        "ip": "192.168.1.63",
+        "timestamp": "2025-06-23 22:50:41",
+        "details": "IP 192.168.1.63 was manually blocked by an administrator."
     }
 ]

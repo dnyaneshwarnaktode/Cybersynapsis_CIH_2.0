@@ -4,27 +4,35 @@
     <h2 style="text-align: center;">IP Blacklist Management</h2>
 
     <div class="card" style="margin-top: 2rem;">
-        <div class="card-header">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <h4>Currently Blocked IPs</h4>
+            <button class="btn btn-sm btn-outline-primary" onclick="refreshBlacklist()">Refresh</button>
         </div>
         <div class="card-body">
-            {% if blocked_ips %}
-                <ul class="list-group list-group-flush" id="blocked-ips-list">
-                    {% for ip in blocked_ips %}
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>{{ ip }}</span>
-                            <button class="btn btn-sm btn-outline-secondary" onclick="unblockIp('{{ ip }}')">Unblock</button>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p class="text-muted">The blacklist is currently empty.</p>
-            {% endif %}
+            <div id="blocked-ips-container">
+                {% if blocked_ips %}
+                    <ul class="list-group list-group-flush" id="blocked-ips-list">
+                        {% for ip in blocked_ips %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>{{ ip }}</span>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="unblockIp('{{ ip }}')">Unblock</button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="text-muted">The blacklist is currently empty.</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
 
 <script>
+function refreshBlacklist() {
+    // Reload the page to get updated blacklist
+    window.location.reload();
+}
+
 function unblockIp(ip) {
     if (!confirm(`Are you sure you want to unblock the IP address: ${ip}?`)) {
         return;
@@ -39,6 +47,11 @@ function unblockIp(ip) {
                 alert(`Successfully unblocked IP: ${ip}`);
                 // Remove the item from the list without a full page reload
                 document.querySelector(`button[onclick="unblockIp('${ip}')"]`).closest('li').remove();
+                // If no more IPs, show empty message
+                const list = document.getElementById('blocked-ips-list');
+                if (list && list.children.length === 0) {
+                    document.getElementById('blocked-ips-container').innerHTML = '<p class="text-muted">The blacklist is currently empty.</p>';
+                }
             } else {
                 alert(`Error unblocking IP: ${data.message}`);
             }
@@ -48,5 +61,15 @@ function unblockIp(ip) {
             alert('An unexpected error occurred. Check the console for details.');
         });
 }
+
+// Auto-refresh the blacklist every 30 seconds to show newly blocked IPs
+setInterval(refreshBlacklist, 30000);
+
+// Also refresh when the page becomes visible (user switches back to tab)
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        refreshBlacklist();
+    }
+});
 </script>
 {% endblock %} 
