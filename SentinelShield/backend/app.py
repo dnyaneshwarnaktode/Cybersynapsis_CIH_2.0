@@ -175,7 +175,7 @@ def analyze_log_entry(log_entry):
 
     now = datetime.now(timezone.utc)
     
-    # Update real-time statistics
+    # Update real-time statistics (keep this for dashboard)
     APP_STATS["total_requests"] += 1
     APP_STATS["unique_visitors"].add(ip)
     APP_STATS["http_status_counts"][log_entry.get('status', '0')] += 1
@@ -196,9 +196,9 @@ def analyze_log_entry(log_entry):
             "requests": APP_STATS["requests_per_minute"]
         })
         if len(APP_STATS["requests_per_minute_history"]) > 10:
-            APP_STATS["requests_pe_minute_history"].pop(0)
+            APP_STATS["requests_per_minute_history"].pop(0)
     
-    # --- 1. Rate Limiting Detection ---
+    # --- 1. Rate Limiting Detection (SUSPICIOUS) ---
     ip_request_counts[ip] = [t for t in ip_request_counts[ip] if (now - t).total_seconds() < TRAFFIC_WINDOW]
     ip_request_counts[ip].append(now)
     if len(ip_request_counts[ip]) > REQUEST_LIMIT:
@@ -209,43 +209,72 @@ def analyze_log_entry(log_entry):
             'timestamp': now.strftime('%Y-%m-%d %H:%M:%S'),
             'details': f"IP exceeded {REQUEST_LIMIT} requests in {TRAFFIC_WINDOW} seconds. Current count: {len(ip_request_counts[ip])} requests.",
             'severity': 'HIGH',
-            'request_path': log_entry.get('request', '').split()[1] if len(log_entry.get('request', '').split()) > 1 else '/',
-            'user_agent': log_entry.get('user_agent', '')[:100]  # Truncate long user agents
+            'source': 'sentinelshield'
         }
         log_suspicious_event(event)
-    # --- 2. Suspicious User-Agent Detection (Example) ---
+        print(f"🚨 RATE LIMIT EXCEEDED: {ip} made {len(ip_request_counts[ip])} requests")
+    
+    # --- 2. Suspicious User-Agent Detection (SUSPICIOUS) ---
     user_agent = log_entry.get('user_agent', '').lower()
-    suspicious_agents = ['sqlmap', 'nmap', 'nikto', 'curl', 'wget', 'python-requests', 'hydra', 'burp', 'w3af', 'zap', 'scanner', 'bot']
+    suspicious_agents = ['sqlmap', 'nmap', 'nikto', 'curl', 'wget', 'python-requests', 'hydra', 'burp', 'w3af', 'zap', 'scanner', 'bot', 'crawler']
     for agent in suspicious_agents:
         if agent in user_agent:
             event = {
                 'type': 'Suspicious User-Agent',
                 'ip': ip,
-                'user_agent': log_entry.get('user_agent', '')[:100],  # Truncate long user agents
                 'timestamp': now.strftime('%Y-%m-%d %H:%M:%S'),
                 'details': f"Detected suspicious user-agent: {agent}",
-                'severity': 'MEDIUM',
-                'request_path': log_entry.get('request', '').split()[1] if len(log_entry.get('request', '').split()) > 1 else '/'
+                'severity': 'HIGH',
+                'source': 'sentinelshield',
+                'user_agent': user_agent
             }
             log_suspicious_event(event)
-            break # Log only once per entry
-
-    # --- 3. HTTP Status Code Monitoring ---
+            print(f"🚨 SUSPICIOUS USER-AGENT: {ip} using {agent}")
+            break
+    
+    # --- 3. HTTP Error Detection (SUSPICIOUS) ---
     status = log_entry.get('status', '0')
     if status.startswith('4') or status.startswith('5'):
-        severity = 'HIGH' if status.startswith('5') else 'MEDIUM'
-        event = {
-            'type': 'HTTP Error',
-            'ip': ip,
-            'status': status,
-            'timestamp': now.strftime('%Y-%m-%d %H:%M:%S'),
-            'details': f"HTTP {status} error detected",
-            'severity': severity,
-            'request_path': log_entry.get('request', '').split()[1] if len(log_entry.get('request', '').split()) > 1 else '/',
-            'user_agent': log_entry.get('user_agent', '')[:100]
-        }
-        log_suspicious_event(event)
-     # --- 4. ML-Based Threat Detection ---
+        # Only log repeated errors from same IP (more suspicious)
+        error_key = f"{ip}_{status}"
+        if error_key not in getattr(analyze_log_entry, 'error_counts', {}):
+            analyze_log_entry.error_counts = {}
+        analyze_log_entry.error_counts[error_key] = analyze_log_entry.error_counts.get(error_key, 0) + 1
+        
+        if analyze_log_entry.error_counts[error_key] >= 3:  # Log after 3+ errors
+            event = {
+                'type': f'HTTP {status} Error',
+                'ip': ip,
+                'timestamp': now.strftime('%Y-%m-%d %H:%M:%S'),
+                'details': f"Multiple HTTP {status} errors from same IP. Count: {analyze_log_entry.error_counts[error_key]}",
+                'severity': 'MEDIUM',
+                'source': 'sentinelshield'
+            }
+            log_suspicious_event(event)
+            print(f"🚨 HTTP ERROR PATTERN: {ip} causing {status} errors")
+    
+    # --- 4. Suspicious Request Patterns (SUSPICIOUS) ---
+    request_line = log_entry.get('request', '')
+    suspicious_patterns = [
+        '/admin', '/wp-admin', '/phpmyadmin', '/config', '/.env', '/backup', '/shell', '/cmd',
+        'UNION SELECT', 'DROP TABLE', 'INSERT INTO', '1=1', 'OR 1', '<script>', 'javascript:'
+    ]
+    
+    for pattern in suspicious_patterns:
+        if pattern.lower() in request_line.lower():
+            event = {
+                'type': 'Suspicious Request Pattern',
+                'ip': ip,
+                'timestamp': now.strftime('%Y-%m-%d %H:%M:%S'),
+                'details': f"Detected suspicious pattern in request: {pattern}",
+                'severity': 'HIGH',
+                'source': 'sentinelshield',
+                'request': request_line
+            }
+            log_suspicious_event(event)
+            print(f"🚨 SUSPICIOUS REQUEST: {ip} - {pattern}")
+            break
+
 # --- 4. ML-Based Threat Detection ---
 try:
     ml_features = {

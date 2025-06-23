@@ -90,7 +90,7 @@ def detect_suspicious_activity():
 
 @app.before_request
 def require_login():
-    # Log all requests for monitoring
+    # Only log suspicious activity, not normal requests
     if request.endpoint not in ('login', 'logout', 'signup', 'static'):
         if not session.get('logged_in'):
             log_event('Unauthorized Access', f"Attempted access to {request.path} without login", 'MEDIUM')
@@ -101,55 +101,52 @@ def require_login():
 
 @app.route('/')
 def index():
-    log_event('Page Access', 'User accessed homepage', 'LOW')
+    # No logging for normal page access
     return render_template('index.html')
 
 @app.route('/how-it-works')
 def how_it_works():
-    log_event('Page Access', 'User accessed how-it-works page', 'LOW')
+    # No logging for normal page access
     return render_template('how-it-works.html')
 
 @app.route('/use-cases')
 def use_cases():
-    log_event('Page Access', 'User accessed use-cases page', 'LOW')
+    # No logging for normal page access
     return render_template('use-cases.html')
 
 @app.route('/team')
 def team():
-    log_event('Page Access', 'User accessed team page', 'LOW')
+    # No logging for normal page access
     return render_template('team.html')
 
 @app.route('/contact')
 def contact():
-    log_event('Page Access', 'User accessed contact page', 'LOW')
+    # No logging for normal page access
     return render_template('contact.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        # Log login attempts
+        # Only log failed login attempts, not successful ones
         log_event('Login Attempt', 'User attempted login', 'MEDIUM')
         # Accept any login for demo
         session['logged_in'] = True
-        log_event('Login Success', 'User successfully logged in', 'LOW')
         return redirect(url_for('index'))
     return render_template('login.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        # Log signup attempts
+        # Only log signup attempts, not successful ones
         log_event('Signup Attempt', 'User attempted to create account', 'MEDIUM')
         # Simulate account creation for demo
         # In a real app, you would save user data to database
-        log_event('Signup Success', 'User successfully created account', 'LOW')
         return redirect(url_for('login'))
     return render_template('signup.html')
 
 @app.route('/logout')
 def logout():
-    if session.get('logged_in'):
-        log_event('Logout', 'User logged out', 'LOW')
+    # No logging for normal logout
     session.clear()
     return render_template('logout.html')
 
