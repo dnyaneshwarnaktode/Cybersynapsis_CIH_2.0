@@ -102,7 +102,8 @@ def process_logs():
     Reads the Nginx access log in real-time, parses new entries,
     and updates application statistics.
     """
-    log_file_path = '/var/log/nginx/access.log'
+    log_file_path = 'mock_access.log'
+
     log_pattern = re.compile(
         r'(?P<ip>\S+) - .* \[(?P<time>.*?)\] "(?P<request>.*?)" '
         r'(?P<status>\d{3}) (?P<size>\d+) "(?P<referer>.*?)" "(?P<user_agent>.*?)" "(?P<x_forwarded_for>.*?)"'

@@ -1,0 +1,493 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - SentinelShield{% endblock %}
+
+{% block content %}
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="signup-container">
+    <div class="signup-card">
+      <!-- Header -->
+      <div class="signup-header text-center mb-4">
+        <h2 class="signup-title">Create Account</h2>
+        <p class="signup-subtitle">Join SentinelShield for secure protection</p>
+      </div>
+
+      <!-- Social Sign Up Buttons -->
+      <div class="social-signup mb-4">
+        <button class="btn btn-social btn-google w-100">
+          <i class="fab fa-google me-2"></i>
+          Sign up with Google
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider mb-4">
+        <span>or</span>
+      </div>
+
+      <!-- Sign Up Form -->
+      <form method="post" class="signup-form">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+        
+        <div class="form-group mb-3">
+          <label for="password" class="form-label">Password</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="fas fa-lock"></i>
+            </span>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required>
+            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="password-strength mt-2">
+            <div class="strength-bar">
+              <div class="strength-fill" id="strengthFill"></div>
+            </div>
+            <small class="strength-text" id="strengthText">Password strength</small>
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="fas fa-lock"></i>
+            </span>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+          <label class="form-check-label" for="agreeTerms">
+            I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+          </label>
+        </div>
+
+        <!-- Sign Up Button -->
+        <button type="submit" class="btn btn-primary w-100 mb-3">
+          <i class="fas fa-user-plus me-2"></i>
+          Create Account
+        </button>
+      </form>
+
+      <!-- Sign In Link -->
+      <div class="text-center">
+        <p class="signin-text">
+          Already have an account? 
+          <a href="{{ url_for('login') }}" class="signin-link">Sign in</a>
+        </p>
+      </div>
+
+      <!-- Demo Sign Up Info -->
+      <div class="demo-info mt-4">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle me-2"></i>
+          <strong>Demo Mode:</strong> This form will simulate account creation for testing purposes.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.signup-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.signup-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.signup-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.btn-social {
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.btn-google:hover {
+  background: #db4437;
+  border-color: #db4437;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.divider span {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 0 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  padding: 12px 16px;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffb347;
+  box-shadow: 0 0 0 0.2rem rgba(255, 179, 71, 0.25);
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group-text {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px 0 0 12px;
+}
+
+.input-group .form-control {
+  border-radius: 0 12px 12px 0;
+}
+
+.btn-outline-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.form-check-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-check-input:checked {
+  background-color: #ffb347;
+  border-color: #ffb347;
+}
+
+.form-check-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.terms-link {
+  color: #ffb347;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.terms-link:hover {
+  color: #e09e3e;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffb347, #e09e3e);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e09e3e, #d18a2e);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 179, 71, 0.3);
+}
+
+.signin-text {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.signin-link {
+  color: #ffb347;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signin-link:hover {
+  color: #e09e3e;
+  text-decoration: underline;
+}
+
+.demo-info .alert {
+  background: rgba(13, 110, 253, 0.1);
+  border: 1px solid rgba(13, 110, 253, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* Password Strength Indicator */
+.password-strength {
+  margin-top: 8px;
+}
+
+.strength-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.strength-fill.weak {
+  width: 25%;
+  background: #dc3545;
+}
+
+.strength-fill.fair {
+  width: 50%;
+  background: #ffc107;
+}
+
+.strength-fill.good {
+  width: 75%;
+  background: #17a2b8;
+}
+
+.strength-fill.strong {
+  width: 100%;
+  background: #28a745;
+}
+
+.strength-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .signup-card {
+    padding: 30px 20px;
+  }
+  
+  .signup-title {
+    font-size: 1.75rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Toggle password visibility
+  const togglePassword = document.getElementById('togglePassword');
+  const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+  const passwordInput = document.getElementById('password');
+  const confirmPasswordInput = document.getElementById('confirmPassword');
+  
+  togglePassword.addEventListener('click', function() {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    const icon = this.querySelector('i');
+    icon.classList.toggle('fa-eye');
+    icon.classList.toggle('fa-eye-slash');
+  });
+
+  toggleConfirmPassword.addEventListener('click', function() {
+    const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    confirmPasswordInput.setAttribute('type', type);
+    
+    const icon = this.querySelector('i');
+    icon.classList.toggle('fa-eye');
+    icon.classList.toggle('fa-eye-slash');
+  });
+
+  // Password strength indicator
+  passwordInput.addEventListener('input', function() {
+    const password = this.value;
+    const strengthFill = document.getElementById('strengthFill');
+    const strengthText = document.getElementById('strengthText');
+    
+    // Remove all classes
+    strengthFill.classList.remove('weak', 'fair', 'good', 'strong');
+    
+    if (password.length === 0) {
+      strengthFill.style.width = '0%';
+      strengthText.textContent = 'Password strength';
+      return;
+    }
+    
+    let strength = 0;
+    if (password.length >= 8) strength++;
+    if (/[a-z]/.test(password)) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/[0-9]/.test(password)) strength++;
+    if (/[^A-Za-z0-9]/.test(password)) strength++;
+    
+    if (strength <= 2) {
+      strengthFill.classList.add('weak');
+      strengthText.textContent = 'Weak password';
+    } else if (strength === 3) {
+      strengthFill.classList.add('fair');
+      strengthText.textContent = 'Fair password';
+    } else if (strength === 4) {
+      strengthFill.classList.add('good');
+      strengthText.textContent = 'Good password';
+    } else {
+      strengthFill.classList.add('strong');
+      strengthText.textContent = 'Strong password';
+    }
+  });
+
+  // Google sign up button effect
+  const googleButton = document.querySelector('.btn-google');
+  googleButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Add loading state
+    const originalText = this.innerHTML;
+    this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Connecting to Google...';
+    this.disabled = true;
+    
+    // Simulate loading
+    setTimeout(() => {
+      this.innerHTML = originalText;
+      this.disabled = false;
+      alert('Google OAuth sign up would be implemented here in a real application.');
+    }, 2000);
+  });
+
+  // Form submission
+  const signupForm = document.querySelector('.signup-form');
+  signupForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+    
+    if (password !== confirmPassword) {
+      alert('Passwords do not match!');
+      return;
+    }
+    
+    // Simulate account creation
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Account...';
+    submitBtn.disabled = true;
+    
+    setTimeout(() => {
+      alert('Account created successfully! You can now sign in.');
+      window.location.href = '/login';
+    }, 2000);
+  });
+
+  // Terms links
+  document.querySelectorAll('.terms-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Terms of Service and Privacy Policy would be displayed here.');
+    });
+  });
+});
+</script>
+{% endblock %} 
