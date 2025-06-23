@@ -3,6 +3,11 @@
 <div style="max-width:1200px; margin:2.5rem auto 0 auto;">
     <h2 style="text-align:center; margin:2rem 0 2.5rem 0;">Real-Time Nginx Traffic Logs</h2>
     <div class="table-container card">
+        <div style="margin-bottom: 1rem;">
+            <span class="status-danger" style="padding:2px 8px; border-radius:4px;">5xx = Server Error</span>
+            <span class="status-warning" style="padding:2px 8px; border-radius:4px;">4xx = Client Error</span>
+            <span class="status-info" style="padding:2px 8px; border-radius:4px;">3xx = Redirect</span>
+        </div>
         <table>
             <thead>
                 <tr>

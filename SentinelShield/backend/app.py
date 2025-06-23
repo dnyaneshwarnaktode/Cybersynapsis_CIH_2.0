@@ -375,43 +375,23 @@ def recent_events():
 @app.route('/real-time-logs')
 @login_required
 def real_time_logs():
-    """Return real-time traffic logs for the logs page"""
-    log_file_path = '/var/log/nginx/access.log'
-    parsed_logs = []
-
-    if not os.path.exists(log_file_path):
-        return jsonify([])
-
+    """Return suspicious events for the logs page"""
     try:
-        with open(log_file_path, 'r') as f:
-            lines = f.readlines()
-            # Get last 50 lines and parse them
-            recent_lines = lines[-50:]
-
-            log_pattern = re.compile(
-                r'(?P<ip>\S+) - .* \[(?P<time>.*?)\] "(?P<request>.*?)" '
-                r'(?P<status>\d{3}) (?P<size>\d+) "(?P<referer>.*?)" "(?P<user_agent>.*?)" "(?P<x_forwarded_for>.*?)"'
-            )
-
-            for line in reversed(recent_lines): # Show newest first immediately
-                match = log_pattern.match(line)
-                if match:
-                    log_entry = match.groupdict()
-                    parsed_logs.append({
-                        'timestamp': log_entry['time'],
-                        'ip': log_entry['ip'],
-                        'request': log_entry['request'],
-                        'status': log_entry['status'],
-                        'size': log_entry['size'],
-                        'user_agent': log_entry['user_agent'][:70] + '...' if len(log_entry['user_agent']) > 70 else log_entry['user_agent']
-                    })
-            
-        return jsonify(parsed_logs)
-
+        events = load_events()
+        # Convert suspicious events to log-like format
+        logs = []
+        for event in reversed(events[-50:]):  # Show newest first, limit to 50
+            logs.append({
+                'timestamp': event.get('timestamp', ''),
+                'ip': event.get('ip', '-'),
+                'request': event.get('request_path', event.get('type', '')),
+                'status': event.get('status', event.get('severity', '')),
+                'size': '-',  # Not applicable
+                'user_agent': event.get('user_agent', '')
+            })
+        return jsonify(logs)
     except Exception as e:
-        print(f"Error reading real-time logs: {e}")
-        # In case of any error (e.g., file lock, malformed line), return an empty list
-        # This prevents the 500 Internal Server Error.
+        print(f"Error reading suspicious events: {e}")
         return jsonify([])
 
 @app.route('/block/<ip>', methods=['POST'])

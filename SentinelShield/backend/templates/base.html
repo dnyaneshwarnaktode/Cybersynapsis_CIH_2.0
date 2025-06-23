@@ -37,7 +37,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="/">Dashboard</a></li>
-              <li class="nav-item"><a class="nav-link" href="/events">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="/events">Events <span id="alert-dot" style="display:none; color:red; font-size:1.2em;">&#128308;</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/logs">Logs</a></li>
               <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
               <li class="nav-item"><a class="nav-link" href="/blacklist">Blacklist</a></li>
@@ -59,5 +59,22 @@
     </footer>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Real-time alert dot logic
+    function checkAlerts() {
+        fetch('/recent-events')
+            .then(res => res.json())
+            .then(events => {
+                const dot = document.getElementById('alert-dot');
+                if (events && events.length > 0) {
+                    dot.style.display = 'inline';
+                } else {
+                    dot.style.display = 'none';
+                }
+            });
+    }
+    setInterval(checkAlerts, 5000);
+    checkAlerts();
+    </script>
 </body>
 </html>
