@@ -1,113 +1,223 @@
 {% extends "base.html" %}
+{% block title %}Historical Data - SentinelShield{% endblock %}
 {% block content %}
 <div style="max-width:1200px; margin:2.5rem auto 0 auto;">
     <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h2 style="text-align:center; margin:2rem 0 2.5rem 0;">Historical Analysis</h2>
+        <h2 style="text-align:center; margin:2rem 0 2.5rem 0;">Historical Data</h2>
         <button id="refresh-btn" class="btn">Refresh Data</button>
     </div>
 
     <div class="history-grid">
         <div class="card" style="padding:2rem;">
             <h4>Requests Per Minute (Last 10 Mins)</h4>
-            <canvas id="requestsHistoryChart" height="150"></canvas>
+            <div id="requestsChartContainer" style="position: relative; height: 300px;">
+                <canvas id="requestsHistoryChart"></canvas>
+            </div>
         </div>
         <div class="card" style="padding:2rem;">
             <h4>HTTP Status Code Distribution</h4>
-            <canvas id="statusPieChart" height="150"></canvas>
+            <div id="statusChartContainer" style="position: relative; height: 300px;">
+                <canvas id="statusPieChart"></canvas>
+            </div>
         </div>
     </div>
+    
+    <!-- Add a message for when no data is available -->
+    <div id="no-data-message" style="display: none; text-align: center; margin-top: 2rem;">
+        <p>No historical data available yet. Data will appear as traffic is processed.</p>
+    </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     let requestsChart, statusChart;
 
     function createOrUpdateCharts(data) {
-        // --- Requests Per Minute Chart ---
-        const reqHistory = data.requests_per_minute_history || [];
-        const reqLabels = reqHistory.map(d => new Date(d.timestamp).toLocaleTimeString());
-        const reqData = reqHistory.map(d => d.requests);
-
-        if (requestsChart) {
-            requestsChart.data.labels = reqLabels;
-            requestsChart.data.datasets[0].data = reqData;
-            requestsChart.update();
+        console.log('Received data:', data); // Debug log
+        
+        // Check if we have data
+        const hasRequestsData = data.requests_per_minute_history && data.requests_per_minute_history.length > 0;
+        const hasStatusData = data.http_status_counts && Object.keys(data.http_status_counts).length > 0;
+        
+        if (!hasRequestsData && !hasStatusData) {
+            document.getElementById('no-data-message').style.display = 'block';
+            return;
         } else {
-            requestsChart = new Chart(document.getElementById('requestsHistoryChart'), {
-                type: 'bar',
-                data: {
-                    labels: reqLabels,
-                    datasets: [{
-                        label: 'Requests per Minute',
-                        data: reqData,
-                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: { scales: { y: { beginAtZero: true } } }
+            document.getElementById('no-data-message').style.display = 'none';
+        }
+
+        // --- Requests Per Minute Chart ---
+        if (hasRequestsData) {
+            const reqHistory = data.requests_per_minute_history || [];
+            const reqLabels = reqHistory.map(d => {
+                const date = new Date(d.timestamp);
+                return date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             });
+            const reqData = reqHistory.map(d => d.requests);
+
+            if (requestsChart) {
+                requestsChart.data.labels = reqLabels;
+                requestsChart.data.datasets[0].data = reqData;
+                requestsChart.update();
+            } else {
+                const ctx = document.getElementById('requestsHistoryChart').getContext('2d');
+                requestsChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: reqLabels,
+                        datasets: [{
+                            label: 'Requests per Minute',
+                            data: reqData,
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 1
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            }
+                        }
+                    }
+                });
+            }
         }
 
         // --- HTTP Status Pie Chart ---
-        const statusCounts = data.http_status_counts || {};
-        const statusLabels = Object.keys(statusCounts);
-        const statusData = Object.values(statusCounts);
+        if (hasStatusData) {
+            const statusCounts = data.http_status_counts || {};
+            const statusLabels = Object.keys(statusCounts);
+            const statusData = Object.values(statusCounts);
 
-        if (statusChart) {
-            statusChart.data.labels = statusLabels;
-            statusChart.data.datasets[0].data = statusData;
-            statusChart.update();
-        } else {
-            statusChart = new Chart(document.getElementById('statusPieChart'), {
-                type: 'pie',
-                data: {
-                    labels: statusLabels,
-                    datasets: [{
-                        label: 'HTTP Status Codes',
-                        data: statusData,
-                        backgroundColor: [
-                            'rgba(40, 167, 69, 0.7)',  // Success (2xx)
-                            'rgba(255, 193, 7, 0.7)',   // Client Error (4xx)
-                            'rgba(220, 53, 69, 0.7)',   // Server Error (5xx)
-                            'rgba(23, 162, 184, 0.7)',  // Redirect (3xx)
-                            'rgba(108, 117, 125, 0.7)' // Other
-                        ]
-                    }]
-                }
-            });
+            if (statusChart) {
+                statusChart.data.labels = statusLabels;
+                statusChart.data.datasets[0].data = statusData;
+                statusChart.update();
+            } else {
+                const ctx = document.getElementById('statusPieChart').getContext('2d');
+                statusChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: statusLabels,
+                        datasets: [{
+                            label: 'HTTP Status Codes',
+                            data: statusData,
+                            backgroundColor: [
+                                'rgba(40, 167, 69, 0.8)',   // Success (2xx) - Green
+                                'rgba(255, 193, 7, 0.8)',   // Client Error (4xx) - Yellow
+                                'rgba(220, 53, 69, 0.8)',   // Server Error (5xx) - Red
+                                'rgba(23, 162, 184, 0.8)',  // Redirect (3xx) - Cyan
+                                'rgba(108, 117, 125, 0.8)', // Other - Gray
+                                'rgba(255, 99, 132, 0.8)',  // Additional colors
+                                'rgba(54, 162, 235, 0.8)',
+                                'rgba(255, 205, 86, 0.8)'
+                            ],
+                            borderWidth: 2,
+                            borderColor: '#fff'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+            }
         }
     }
 
     function fetchData() {
         fetch('/history-data')
-            .then(res => res.json())
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                return res.json();
+            })
             .then(data => {
+                console.log('Fetched data:', data); // Debug log
                 createOrUpdateCharts(data);
             })
-            .catch(err => console.error("Error fetching history data:", err));
+            .catch(err => {
+                console.error("Error fetching history data:", err);
+                document.getElementById('no-data-message').style.display = 'block';
+                document.getElementById('no-data-message').innerHTML = 
+                    '<p>Error loading data. Please try refreshing the page.</p>';
+            });
     }
 
     document.getElementById('refresh-btn').addEventListener('click', fetchData);
     
     // Initial fetch
     fetchData();
+    
+    // Auto-refresh every 30 seconds
+    setInterval(fetchData, 30000);
 </script>
+
 <style>
     .history-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         gap: 1.5rem;
+        margin-bottom: 2rem;
     }
+    
+    .card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
     .btn {
-        background-color: #007bff;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
-        padding: 10px 15px;
+        padding: 12px 24px;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+    
     .btn:hover {
-        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    #no-data-message {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    #no-data-message p {
+        color: #666;
+        font-size: 1.1rem;
+        margin: 0;
     }
 </style>
 {% endblock %}
