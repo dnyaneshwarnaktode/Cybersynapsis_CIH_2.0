@@ -45,20 +45,7 @@ cd SentinelShield
 The `.env` file has been created automatically. You can modify it in `backend/.env`:
 
 ```env
-# Admin Authentication
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=password123
-SECRET_KEY=your-super-secret-key-change-this-in-production
 
-# Email Alerts (Optional)
-EMAIL_ALERTS_ENABLED=False
-SMTP_SERVER=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USERNAME=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
-EMAIL_FROM=your-email@gmail.com
-EMAIL_TO=admin@yourdomain.com
-```
 
 ### 3. Start the Services
 ```bash
